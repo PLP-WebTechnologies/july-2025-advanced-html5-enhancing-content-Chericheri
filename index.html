@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Content & Forms Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>HTML5 Content & Forms Mastery</h1>
+        <p>Demonstrating advanced HTML5 elements and form validation</p>
+    </header>
+
+    <main>
+        <section id="content-elements">
+            <h2>Content Organization with HTML5</h2>
+            
+            <article>
+                <h3>Lists in HTML</h3>
+                
+                <h4>Unordered List (Features)</h4>
+                <ul>
+                    <li>Semantic document structure</li>
+                    <li>Built-in form validation</li>
+                    <li>Multimedia support
+                        <ul>
+                            <li>Video</li>
+                            <li>Audio</li>
+                            <li>Canvas</li>
+                        </ul>
+                    </li>
+                    <li>Accessibility improvements</li>
+                </ul>
+                
+                <h4>Ordered List (Steps)</h4>
+                <ol>
+                    <li>Plan your content structure</li>
+                    <li>Choose appropriate semantic elements</li>
+                    <li>Implement accessibility features</li>
+                    <li>Test with multiple devices</li>
+                </ol>
+                
+                <h4>Description List (Terms)</h4>
+                <dl>
+                    <dt>HTML5</dt>
+                    <dd>The latest version of HyperText Markup Language</dd>
+                    
+                    <dt>Semantic HTML</dt>
+                    <dd>Using HTML elements according to their meaning rather than presentation</dd>
+                </dl>
+            </article>
+            
+            <article>
+                <h3>Tables in HTML</h3>
+                <table>
+                    <caption>HTML5 Input Types Comparison</caption>
+                    <thead>
+                        <tr>
+                            <th>Input Type</th>
+                            <th>Purpose</th>
+                            <th>Browser Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>email</td>
+                            <td>Email address validation</td>
+                            <td>Excellent</td>
+                        </tr>
+                        <tr>
+                            <td>date</td>
+                            <td>Date picker</td>
+                            <td>Good</td>
+                        </tr>
+                        <tr>
+                            <td>range</td>
+                            <td>Slider control</td>
+                            <td>Excellent</td>
+                        </tr>
+                        <tr>
+                            <td>color</td>
+                            <td>Color picker</td>
+                            <td>Good</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">* Support ratings as of 2023</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </article>
+            
+            <article>
+                <h3>Media in HTML5</h3>
+                
+                <h4>Image with Figure</h4>
+                <figure>
+                    <img src="images/plp2.jpg" alt="Placeholder image demonstrating HTML5 features" width="800" height="400">
+                    <figcaption>Example of semantic HTML5 figure with caption</figcaption>
+                </figure>
+                
+                <h4>Audio Example</h4>
+                <audio controls>
+                    <source src="audio-sample.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <h4>Video Example</h4>
+                <video controls width="800" poster="images/plp1.jpg">
+                    <source src="videos/11.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+            </article>
+        </section>
+
+        <section id="html5-form">
+            <h2>HTML5 Form with Native Validation</h2>
+            
+            <form id="registration" novalidate>
+                <fieldset>
+                    <legend><span class="required">Personal Information</span></legend>
+                    
+                    <div>
+                        <label for="fullname" class="required">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" required minlength="3" placeholder="Enter your full name" autocomplete="name">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com" autocomplete="email">
+                    </div>
+                    
+                    <div>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" max="2005-12-31">
+                    </div>
+                    
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                        <small>Format: 123-456-7890</small>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Account Details</legend>
+                    
+                    <div>
+                        <label for="username" class="required">Username</label>
+                        <input type="text" id="username" name="username" required minlength="4" maxlength="20" pattern="[a-zA-Z0-9]+" title="Letters and numbers only, no spaces">
+                    </div>
+                    
+                    <div>
+                        <label for="password" class="required">Password</label>
+                        <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+                        <small>Minimum 8 characters</small>
+                    </div>
+                    
+                    <div>
+                        <label for="website">Website URL</label>
+                        <input type="url" id="website" name="website" placeholder="https://example.com">
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Preferences</legend>
+                    
+                    <div class="radio-group">
+                        <label>Subscription Level</label>
+                        <div>
+                            <input type="radio" id="free" name="subscription" value="free" checked>
+                            <label for="free" class="inline-label">Free</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="pro" name="subscription" value="pro">
+                            <label for="pro" class="inline-label">Pro ($9.99/month)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="enterprise" name="subscription" value="enterprise">
+                            <label for="enterprise" class="inline-label">Enterprise ($29.99/month)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <label>Interests (Select all that apply)</label>
+                        <div>
+                            <input type="checkbox" id="web-dev" name="interests" value="web-dev">
+                            <label for="web-dev" class="inline-label">Web Development</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="design" name="interests" value="design">
+                            <label for="design" class="inline-label">Design</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="marketing" name="interests" value="marketing">
+                            <label for="marketing" class="inline-label">Marketing</label>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label for="fav-color">Favorite Color</label>
+                        <input type="color" id="fav-color" name="fav-color" value="#3498db">
+                    </div>
+                    
+                    <div>
+                        <label for="skill-level">Skill Level</label>
+                        <input type="range" id="skill-level" name="skill-level" min="1" max="10" value="5">
+                        <output for="skill-level" id="skill-output">5</output>
+                    </div>
+                    
+                    <div>
+                        <label for="country">Country</label>
+                        <select id="country" name="country">
+                            <option value="">Select a country</option>
+                            <option value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="AU">Australia</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" name="bio" rows="4" maxlength="500" placeholder="Tell us about yourself..."></textarea>
+                        <small>Max 500 characters</small>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Terms</legend>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms" class="inline-label required">I agree to the terms and conditions</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                            <label for="newsletter" class="inline-label">Subscribe to newsletter</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <button type="submit">Submit Registration</button>
+                    <button type="reset">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Content & Forms Mastery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple script to update range output (not part of validation)
+        document.getElementById('skill-level').addEventListener('input', function() {
+            document.getElementById('skill-output').value = this.value;
+        });
+    </script>
+</body>
+</html>
